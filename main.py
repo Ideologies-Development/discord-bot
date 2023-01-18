@@ -18,6 +18,7 @@ class SpamtonBot(commands.AutoShardedInteractionBot):
         self.activity = disnake.Game("Together with all of you")
         self.help_command = None
         self.error_webhook = os.getenv("ERROR_WEBHOOK")
+        self.ticket_chan = 1064527781616160788
 
     def load_all_cogs(self):
         for filename in os.listdir("./cogs"):
@@ -29,7 +30,7 @@ class SpamtonBot(commands.AutoShardedInteractionBot):
 
 bot = SpamtonBot(
     intents=intents,
-    owner_ids=[536538183555481601],
+    owner_ids=[536538183555481601, 271285474516140033, 721940901542363158],
     allowed_mentions=AllowedMentions(
         users=True,
         everyone=True,
