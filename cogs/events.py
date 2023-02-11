@@ -1,5 +1,4 @@
-import disnake 
-import requests
+import disnake
 from disnake.ext import commands
 
 class Events(commands.Cog):
